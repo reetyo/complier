@@ -1,11 +1,19 @@
  grammar hello;
 
- prog: stat ; 
- stat: expr |NEWLINE ;
- expr : multExpr (('+'|'-') multExpr)* ; 
- multExpr : atom (('*'|'/') atom)* ; 
- atom:  '(' expr ')' | INT  | ID  ;
- ID : ('a'..'z' |'A'..'Z')+ ; 
- INT : '0'..'9' + ; 
- NEWLINE:'\r' ? '\n' ; 
- WS : (' ' |'\t' |'\n' |'\r' )+ {skip();} ;
+prog: stat+ ;
+
+ID : [a-zA-Z]+ ;
+INT : [0-9]+ ;
+NEWLINE:'\r'? '\n' ;
+WS : [ \t]+ -> skip ;
+
+stat:   expr NEWLINE    # printExpr
+| ID '=' expr NEWLINE   # assign
+| NEWLINE 				# blank
+;				
+expr: expr op=('*'|'/') expr # MulDiv
+| expr op=('+'|'-') expr  # AddSub
+| INT                     # int
+| ID                      #id
+| '(' expr ')' 			  # parens
+;

@@ -20,39 +20,75 @@ helloListener.prototype.exitProg = function(ctx) {
 };
 
 
-// Enter a parse tree produced by helloParser#stat.
-helloListener.prototype.enterStat = function(ctx) {
+// Enter a parse tree produced by helloParser#printExpr.
+helloListener.prototype.enterPrintExpr = function(ctx) {
 };
 
-// Exit a parse tree produced by helloParser#stat.
-helloListener.prototype.exitStat = function(ctx) {
-};
-
-
-// Enter a parse tree produced by helloParser#expr.
-helloListener.prototype.enterExpr = function(ctx) {
-};
-
-// Exit a parse tree produced by helloParser#expr.
-helloListener.prototype.exitExpr = function(ctx) {
+// Exit a parse tree produced by helloParser#printExpr.
+helloListener.prototype.exitPrintExpr = function(ctx) {
 };
 
 
-// Enter a parse tree produced by helloParser#multExpr.
-helloListener.prototype.enterMultExpr = function(ctx) {
+// Enter a parse tree produced by helloParser#assign.
+helloListener.prototype.enterAssign = function(ctx) {
 };
 
-// Exit a parse tree produced by helloParser#multExpr.
-helloListener.prototype.exitMultExpr = function(ctx) {
+// Exit a parse tree produced by helloParser#assign.
+helloListener.prototype.exitAssign = function(ctx) {
 };
 
 
-// Enter a parse tree produced by helloParser#atom.
-helloListener.prototype.enterAtom = function(ctx) {
+// Enter a parse tree produced by helloParser#blank.
+helloListener.prototype.enterBlank = function(ctx) {
 };
 
-// Exit a parse tree produced by helloParser#atom.
-helloListener.prototype.exitAtom = function(ctx) {
+// Exit a parse tree produced by helloParser#blank.
+helloListener.prototype.exitBlank = function(ctx) {
+};
+
+
+// Enter a parse tree produced by helloParser#id.
+helloListener.prototype.enterId = function(ctx) {
+};
+
+// Exit a parse tree produced by helloParser#id.
+helloListener.prototype.exitId = function(ctx) {
+};
+
+
+// Enter a parse tree produced by helloParser#int.
+helloListener.prototype.enterInt = function(ctx) {
+};
+
+// Exit a parse tree produced by helloParser#int.
+helloListener.prototype.exitInt = function(ctx) {
+};
+
+
+// Enter a parse tree produced by helloParser#AddSub.
+helloListener.prototype.enterAddSub = function(ctx) {
+};
+
+// Exit a parse tree produced by helloParser#AddSub.
+helloListener.prototype.exitAddSub = function(ctx) {
+};
+
+
+// Enter a parse tree produced by helloParser#parens.
+helloListener.prototype.enterParens = function(ctx) {
+};
+
+// Exit a parse tree produced by helloParser#parens.
+helloListener.prototype.exitParens = function(ctx) {
+};
+
+
+// Enter a parse tree produced by helloParser#MulDiv.
+helloListener.prototype.enterMulDiv = function(ctx) {
+};
+
+// Exit a parse tree produced by helloParser#MulDiv.
+helloListener.prototype.exitMulDiv = function(ctx) {
 };
 
 
